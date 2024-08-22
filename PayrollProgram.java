@@ -19,9 +19,62 @@ import java.util.Scanner;
 
 
 public class PayrollProgram {
-    public static void main(String[] args) {
-        System.out.println("\n\n...Welcome to the payroll program...\n");
 
+    static void theHelloMethod(){
+        System.out.println(" \n Hello from theHelloMethod() !");
+    }
+
+    //Create a method that gets input.
+    // This is the method's definition.
+    static void aPersonalGreeting(String someName) {
+        System.out.println(" \n Hello " + someName + " how are you today?");
+    }
+
+    // Create a method that gets two integers and returns their sum.
+    // Create two int parameters
+    static int sumTwoInts(int num1, int num2) {
+        int mySum = 0;
+        mySum = num1 + num2;
+
+        return mySum;
+
+    }
+
+
+
+    public static void main(String[] args) {
+        System.out.printf("\n\n...Welcome to Methods!\n");
+
+
+        // Variables (members)
+        String theUserName = "";
+        // Create a scanner object to get input from the user
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the user's name
+        System.out.println("\n Please enter your name: ");
+        theUserName = scanner.nextLine();
+
+        // Call (invoke) our greeting method.
+        aPersonalGreeting(theUserName);
+
+        theHelloMethod();
+
+        // variable
+        int aSum = 0;
+        // Call our new sum method.
+        aSum = sumTwoInts(3,4);
+
+        System.out.println("\n aSum is: " + aSum);
+
+        System.out.println("\n This is the end of my program");
+
+
+
+
+
+/*
         String userName = "";
         int hoursWorked = 0;
         int overtimeHours = 0;
@@ -56,7 +109,8 @@ public class PayrollProgram {
         payRate = myScannerObj.nextInt();
 
         // Create an output statement to the user echoing the user's input.
-        System.out.println("\n Hello," + userName + " you worked: " + hoursWorked + " hours this week!");
+        System.out.println("\n Hello," + userName + " you've" +
+                " worked: " + hoursWorked + " hours this week!");
 
         // Processing
         overtimeHours = hoursWorked - 40;
@@ -73,5 +127,7 @@ public class PayrollProgram {
 
         // Create an output statement to user's pay this week
         System.out.println("\n Hello," + userName + "\n Your total amount of hours and pay rate for this week is: $" + payCheck);
+         */
     }
 }
+
